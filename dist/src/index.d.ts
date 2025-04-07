@@ -1,3 +1,11 @@
-import TendermintWSClient from './client.js';
-export type { TendermintWSClientConfig } from './client.js';
+import TendermintWSClient from './core/client.js';
 export default TendermintWSClient;
+export type { TendermintWSClientConfig } from './core/client.js';
+export { EventType, TMEventEmitter } from './core/events.js';
+export type { TendermintEvent, DecodedTendermintEvent, TxResult, DecodedTxResult, TransferData, WSMessage, MessageHandlerFn, TxHandlerFn, ErrorHandlerFn, ConnectionHandlerFn, ReconnectHandlerFn } from './core/events.js';
+export { FilterManager } from './filters/filters.js';
+export type { FilterFiles, EventFilter } from './filters/filters.js';
+export { ChainType, createTransformer } from './transformers/transformers.js';
+export type { ChainInfo, TransformedMessageData } from './transformers/transformers.js';
+export { AdvancedFilterEngine, MatchType } from './filters/advanced-filters.js';
+export type { AdvancedFilter, AttributeCondition } from './filters/advanced-filters.js';
